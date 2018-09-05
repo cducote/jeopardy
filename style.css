@@ -6,3 +6,8 @@
     align-items: center;
     border-radius: 30;
 }
+.disabled { 
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: default;
+}

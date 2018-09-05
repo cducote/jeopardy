@@ -127,26 +127,48 @@ const gameBoard = {
     }]
     
 }
+$('.button').on('click', (e) => {
+    if ($(e.currentTarget).hasClass('right')) {
+        alert("CORRECT")
+    } else {
+    alert("WRONG") }
+    $('.modal').toggleClass('is-active')
+    $('.modal-card-title').empty()
+    $('.modal-card-body').empty()
+    $('.A').empty()
+    $('.B').empty()
+    $('.C').empty()
+    $('.D').empty()
+})
+
+
+
 //200 point modal
 $('#200').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
     const question = gameBoard.twoHundred[index]
+    $(e.currentTarget).addClass('disabled');
+    //fill modal with appropriate question and answers
     $('.modal').toggleClass('is-active')
         $('.modal-card-title').append(`${question.category} for ${question.value}`)
         $('.modal-card-body').append(`${question.question}`)
-        $('.A').append(`${question.right}`)
+        $('.A').append(`${question.right}`).addClass('right')
         $('.B').append(`${question.wrong[0]}`)
         $('.C').append(`${question.wrong[1]}`)
         $('.D').append(`${question.wrong[2]}`)
+        
+//empty modal after question answered
+
 })
 //400 point modal
 $('#400').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
     const question = gameBoard.fourHundred[index]
+    $(e.currentTarget).addClass('disabled');
     $('.modal').toggleClass('is-active')
         $('.modal-card-title').append(`${question.category} for ${question.value}`)
         $('.modal-card-body').append(`${question.question}`)
-        $('.A').append(`${question.right}`)
+        $('.A').append(`${question.right}`).addClass('right')
         $('.B').append(`${question.wrong[0]}`)
         $('.C').append(`${question.wrong[1]}`)
         $('.D').append(`${question.wrong[2]}`)
@@ -155,10 +177,11 @@ $('#400').on('click', '.column', (e) => {
 $('#600').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
     const question = gameBoard.sixHundred[index]
+    $(e.currentTarget).addClass('disabled');
     $('.modal').toggleClass('is-active')
         $('.modal-card-title').append(`${question.category} for ${question.value}`)
         $('.modal-card-body').append(`${question.question}`)
-        $('.A').append(`${question.right}`)
+        $('.A').append(`${question.right}`).addClass('right')
         $('.B').append(`${question.wrong[0]}`)
         $('.C').append(`${question.wrong[1]}`)
         $('.D').append(`${question.wrong[2]}`)
@@ -167,10 +190,11 @@ $('#600').on('click', '.column', (e) => {
 $('#800').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
     const question = gameBoard.eightHundred[index]
+    $(e.currentTarget).addClass('disabled');
     $('.modal').toggleClass('is-active')
         $('.modal-card-title').append(`${question.category} for ${question.value}`)
         $('.modal-card-body').append(`${question.question}`)
-        $('.A').append(`${question.right}`)
+        $('.A').append(`${question.right}`).addClass('right')
         $('.B').append(`${question.wrong[0]}`)
         $('.C').append(`${question.wrong[1]}`)
         $('.D').append(`${question.wrong[2]}`)
@@ -179,10 +203,11 @@ $('#800').on('click', '.column', (e) => {
 $('#1000').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
     const question = gameBoard.oneThousand[index]
+    $(e.currentTarget).addClass('disabled');
     $('.modal').toggleClass('is-active')
         $('.modal-card-title').append(`${question.category} for ${question.value}`)
         $('.modal-card-body').append(`${question.question}`)
-        $('.A').append(`${question.right}`)
+        $('.A').append(`${question.right}`).addClass('right')
         $('.B').append(`${question.wrong[0]}`)
         $('.C').append(`${question.wrong[1]}`)
         $('.D').append(`${question.wrong[2]}`)
