@@ -128,7 +128,11 @@ const gameBoard = {
     
 }
 $('.button').on('click', (e) => {
+    //POINT SYSTEM
+  var points = 0
+  var pointVal = points + this.value
     if ($(e.currentTarget).hasClass('right')) {
+       points += pointVal
         alert("CORRECT")
     } else {
     alert("WRONG") }
