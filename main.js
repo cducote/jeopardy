@@ -99,9 +99,35 @@ const gameBoard = {
         wrong: ["Stimulus", "Bopis", "Dangus"],
         value: 800,
         category: "JS"
+    }],
+    oneThousand: [{
+        question: 'This tag creates a space break on an HTML page',
+        right: '< br >',
+        wrong: ["< hr >", "< sb >", "< beef >"],
+        value: 1000,
+        category: "HTML"
+    }, {
+        question: 'This property creates rounded edges on an Element',
+        right: 'border-radius:',
+        wrong: ["round-margins:", "circle-sides:", "round-off:"],
+        value: 1000,
+        category: "CSS"
+    }, {
+        question: 'This Terminal command deletes a directory',
+        right: 'rm',
+        wrong: ["mv", "cp", "del"],
+        value: 1000,
+        category: "Terminal"
+    }, {
+        question: 'This is the proper way to say AND in a statement',
+        right: '&&',
+        wrong: ["||", "|&", "and"],
+        value: 1000,
+        category: "JS"
     }]
     
 }
+//200 point modal
 $('#200').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
     const question = gameBoard.twoHundred[index]
@@ -113,6 +139,7 @@ $('#200').on('click', '.column', (e) => {
         $('.C').append(`${question.wrong[1]}`)
         $('.D').append(`${question.wrong[2]}`)
 })
+//400 point modal
 $('#400').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
     const question = gameBoard.fourHundred[index]
@@ -124,6 +151,7 @@ $('#400').on('click', '.column', (e) => {
         $('.C').append(`${question.wrong[1]}`)
         $('.D').append(`${question.wrong[2]}`)
 })
+//600 point modal
 $('#600').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
     const question = gameBoard.sixHundred[index]
@@ -135,6 +163,7 @@ $('#600').on('click', '.column', (e) => {
         $('.C').append(`${question.wrong[1]}`)
         $('.D').append(`${question.wrong[2]}`)
 })
+//800 point modal
 $('#800').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
     const question = gameBoard.eightHundred[index]
@@ -146,10 +175,15 @@ $('#800').on('click', '.column', (e) => {
         $('.C').append(`${question.wrong[1]}`)
         $('.D').append(`${question.wrong[2]}`)
 })
-
-        // copy and paste keys
-        // question: '',
-        // right: '',
-        // wrong: ["", "", ""],
-        // value: 800,
-        // category: ""
+//1000 point modal
+$('#1000').on('click', '.column', (e) => {
+    const index = $(e.currentTarget).data('questionindex')
+    const question = gameBoard.oneThousand[index]
+    $('.modal').toggleClass('is-active')
+        $('.modal-card-title').append(`${question.category} for ${question.value}`)
+        $('.modal-card-body').append(`${question.question}`)
+        $('.A').append(`${question.right}`)
+        $('.B').append(`${question.wrong[0]}`)
+        $('.C').append(`${question.wrong[1]}`)
+        $('.D').append(`${question.wrong[2]}`)
+})
