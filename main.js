@@ -51,29 +51,29 @@ const gameBoard = {
         category: "JS"
     }],
     sixHundred: [{
-        question: '',
-        right: '',
-        wrong: ["", "", ""],
+        question: 'Complete this line... < meta charset="...',
+        right: 'utf-8" >',
+        wrong: ["english > ", "spanish >", "ufc-9 >"],
         value: 600,
-        category: ""
+        category: "HTML"
     }, {
-        question: '',
-        right: '',
-        wrong: ["", "", ""],
+        question: 'To style a given class, add this character before your property',
+        right: '.',
+        wrong: [",", "#", "~"],
         value: 600,
-        category: ""
+        category: "CSS"
     }, {
-        question: '',
-        right: '',
-        wrong: ["", "", ""],
+        question: 'This Terminal command creates a file inside of a directory',
+        right: 'touch',
+        wrong: ["pinch", "grab", "caress"],
         value: 600,
-        category: ""
+        category: "Terminal"
     }, {
-        question: '',
-        right: '',
-        wrong: ["", "", ""],
+        question: 'this jQuery symbol goes before any command to interact with jQuery',
+        right: '$',
+        wrong: ["~", ".", "{}"],
         value: 600,
-        category: ""
+        category: "JS"
     }]
     
 }
@@ -99,9 +99,9 @@ $('#400').on('click', '.column', (e) => {
         $('.C').append(`${question.wrong[1]}`)
         $('.D').append(`${question.wrong[2]}`)
 })
-$('#400').on('click', '.column', (e) => {
+$('#600').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
-    const question = gameBoard.fourHundred[index]
+    const question = gameBoard.sixHundred[index]
     $('.modal').toggleClass('is-active')
         $('.modal-card-title').append(`${question.category} for ${question.value}`)
         $('.modal-card-body').append(`${question.question}`)
@@ -109,7 +109,7 @@ $('#400').on('click', '.column', (e) => {
         $('.B').append(`${question.wrong[0]}`)
         $('.C').append(`${question.wrong[1]}`)
         $('.D').append(`${question.wrong[2]}`)
-
+})
 
         // copy and paste keys
         // question: '',
