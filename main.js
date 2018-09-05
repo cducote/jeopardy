@@ -26,9 +26,14 @@ $('#two').children().on('click', () => {
         $('.modal').toggleClass('is-active')
         $('.modal-card-title').append(`${gameBoard.twoHundred[0].category} for ${gameBoard.twoHundred[0].value}`)
         $('.modal-card-body').append(`${gameBoard.twoHundred[0].question}`)
+        $('.A').append(`${gameBoard.twoHundred[0].right}`)
+        $('.B').append(`${gameBoard.twoHundred[0].wrong[0]}`)
+        $('.C').append(`${gameBoard.twoHundred[0].wrong[1]}`)
+        $('.D').append(`${gameBoard.twoHundred[0].wrong[2]}`)
         
     }
 })
+
     
    
 
@@ -65,4 +70,4 @@ $('#two').children().on('click', () => {
 
 
 
-console.log("im in here!")
+// console.log("im in here!")
