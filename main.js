@@ -74,6 +74,31 @@ const gameBoard = {
         wrong: ["~", ".", "{}"],
         value: 600,
         category: "JS"
+    }],
+    eightHundred: [{
+        question: 'This tag is the most global possible tag on a page',
+        right: '< html >',
+        wrong: ["< main >", "< global >", "< beef >"],
+        value: 800,
+        category: "HTML"
+    }, {
+        question: 'The C ins CSS for...',
+        right: 'Cascading',
+        wrong: ["Colorful", "Creative", "Computer"],
+        value: 800,
+        category: "CSS"
+    }, {
+        question: 'This following command lists all files including hidden ones in a directory',
+        right: '-a',
+        wrong: ["-r", "-all", "-B"],
+        value: 800,
+        category: "Terminal"
+    }, {
+        question: 'What is the name of this character: %',
+        right: 'Modulus',
+        wrong: ["Stimulus", "Bopis", "Dangus"],
+        value: 800,
+        category: "JS"
     }]
     
 }
@@ -110,10 +135,21 @@ $('#600').on('click', '.column', (e) => {
         $('.C').append(`${question.wrong[1]}`)
         $('.D').append(`${question.wrong[2]}`)
 })
+$('#800').on('click', '.column', (e) => {
+    const index = $(e.currentTarget).data('questionindex')
+    const question = gameBoard.eightHundred[index]
+    $('.modal').toggleClass('is-active')
+        $('.modal-card-title').append(`${question.category} for ${question.value}`)
+        $('.modal-card-body').append(`${question.question}`)
+        $('.A').append(`${question.right}`)
+        $('.B').append(`${question.wrong[0]}`)
+        $('.C').append(`${question.wrong[1]}`)
+        $('.D').append(`${question.wrong[2]}`)
+})
 
         // copy and paste keys
         // question: '',
         // right: '',
         // wrong: ["", "", ""],
-        // value: ,
+        // value: 800,
         // category: ""
