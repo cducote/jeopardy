@@ -12,36 +12,21 @@ const gameBoard = {
         value: 200,
         category: "CSS"
     }, {
-        question: '',
-        right: 'tying out anwewr s sucks',
-        wrong: ["wrong 1", "wrong 2", "wrong 3"],
+        question: 'This character is equal to telling your terminal "home directory"',
+        right: '~',
+        wrong: ["cd", "pwd", "ls"],
         value: 200,
         category: "Terminal"
     }, {
-        question: 'which one #4?',
-        right: 'tying out anwewr s sucks',
-        wrong: ["wrong 1", "wrong 2", "wrong 3"],
+        question: 'This is the shorthand method for declaring a variable',
+        right: 'var',
+        wrong: ["if", "const", "for"],
         value: 200,
         category: "JS"
            
     }]
     
 }
-// $('#two').children().on('click', () => {
-//     if ( $('.column').hasClass('.html')) {
-//         $('.modal').toggleClass('is-active')
-//         $('.modal-card-title').append(`${gameBoard.twoHundred[0].category} for ${gameBoard.twoHundred[0].value}`)
-//         $('.modal-card-body').append(`${gameBoard.twoHundred[0].question}`)
-//         $('.A').append(`${gameBoard.twoHundred[0].right}`)
-//         // $('.A').append(e.curretTarget.right)
-//         $('.B').append(`${gameBoard.twoHundred[0].wrong[0]}`)
-//         $('.C').append(`${gameBoard.twoHundred[0].wrong[1]}`)
-//         $('.D').append(`${gameBoard.twoHundred[0].wrong[2]}`)
-//         gameBoard.twoHundred[0]
-//     }
-// })
-
-
 $('#200').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
     const question = gameBoard.twoHundred[index]
@@ -55,41 +40,3 @@ $('#200').on('click', '.column', (e) => {
         $('.D').append(`${question.wrong[2]}`)
 
 })
-console.log ($('#200').children().eq(0))
-console.log (gameBoard.twoHundred[0].question)
-console.log (gameBoard.twoHundred[0].category)
-// console.log (`${gameBoard.twoHundred[0].right}, ${gameBoard.twoHundred[0].wrong}`)
-// $(`${gameBoard.twoHundred[0].right}${gameBoard.twoHundred[0].wrong}`).pushStack(gameBoard.twoHundred[0].multipleChoice)
-// console.log(gameBoard.twoHundred[0].multipleChoice)
-
-
-
-
-
-
-
-
-
-
-
-// $('body').append(`<div class='column'>${gameBoard.html[1].value}</div>`)
-
-// $('#html200').on('click', () => {
-//     $('#modalh1').addClass('is-active')
-// })
-// $('.correct').on('click', () => {
-//     alert("Correct!")
-// })
-// $('.wrong').on('click', () => {
-//     alert("Incorrect!")
-// })
-// var points = 0
-// $('.correct').on('click', () => {
-//     points =+ 200
-//     $('#modalh1').removeClass('is-active')
-//     $('h1').append("Points: " + points)
-// })
-
-
-
-// console.log("im in here!")
