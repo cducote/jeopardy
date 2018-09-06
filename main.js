@@ -160,7 +160,7 @@ $('.button').on('click', (e) => {
     if (points >= 2000) {
         $('.skill').text("Skill Level: " + "Exposed!")
     }
-    if (points >= 3000 && points < 3200) {
+    if (points >= 3000 && points <= 3600) {
         $('.skill').text("Skill Level: " + "Apprentice!")
         $('html').append('<iframe width="0" height="0" src="https://www.youtube.com/embed/_Z3ra0CxCE0?autoplay=1"></iframe>')
     }
@@ -170,7 +170,7 @@ $('.button').on('click', (e) => {
     if (points >= 5000) {
         $('.skill').text("Skill Level: " + "Journeyman!")
     }
-    if (points >= 7000) {
+    if (points >= 6000 && points <= 7600) {
         $('.skill').text("Skill Level: " + "Master of WDI Unit 1")
         $('html').append('<iframe width="0" height="0" src="https://www.youtube.com/embed/vFrNxJoB768?autoplay=1"></iframe>')
     }

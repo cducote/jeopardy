@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/WljpG7sH3r4?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <head>
     <meta charset="utf-8">
@@ -9,13 +10,27 @@
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-
-<body>
-        <!-- <iframe width="10" height="10" src="https://www.youtube.com/embed/IkdmOVejUlI?autoplay=1" allow="autoplay; encrypted-media"></iframe> -->
-        <iframe width="10" height="10" src="https://www.youtube.com/embed/WljpG7sH3r4?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<style>
+    #section1 {
+        padding-bottom: 0;
+    }
+    #footer {
+        padding-top: 0;
+        padding-bottom: 60px;
+    }
+    .column {
+        border: 3px solid black;
+    }
+    
+</style>
+<body class="has-background-black">
         
-    <section class="section">
+        
+    <section id="section1" class="section">
         <div class="container">
+            <div class="columns is-gapless has-text-centered has-background-info has-text-warning is-marginless is-size-2 is-mobile">
+                <div class="column">Jeopardy!</div>
+            </div>
             <!-- Top Columns are all for topics, they will be static -->
             <div class="columns is-gapless has-text-centered has-background-info has-text-warning is-marginless is-size-4 is-mobile">
                 <div class="column">
@@ -106,20 +121,23 @@
                     1000
                 </div>
             </div>
+        <div class="columns is-gapless has-text-centered has-background-danger has-text-white is-marginless is-size-6 is-mobile">
+            <div class="column">
+                Test your skill level by answering all the multiple choice questions!
+            </div>
         </div>
+        </div>
+
     </section>
-    <section class="section">
-        <div class="columns">
+    <section id="footer" class="section">
+        <div class="columns is-gapless has-text-centered has-background-info has-text-warning is-marginless is-size-4 is-mobile">
             <div class ="column scoreboard">
                 Points:
             </div>
             <div class="column skill">
                 Skill Level:
             </div>
-            <div class="column">
-
             </div>
-        </div>
 
     </section>
 
