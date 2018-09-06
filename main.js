@@ -127,17 +127,21 @@ const gameBoard = {
     }]
     
 }
-var points = 0
+//Global points
+let points = 0
+let currentQuestionValue
 
+//Modal instance
 $('.button').on('click', (e) => {
     //POINT SYSTEM
-    
-    
     if ($(e.currentTarget).hasClass('right')) {
-        points += ($(e.currentTarget.value))
+        points += currentQuestionValue
         alert("CORRECT")
+        newPoints(points)
     } else {
         alert("WRONG")
+        points -= currentQuestionValue
+        newPoints(points)
     }
     $('.modal').toggleClass('is-active')
     $('.modal-card-title').empty()
@@ -146,6 +150,10 @@ $('.button').on('click', (e) => {
     $('.B').empty()
     $('.C').empty()
     $('.D').empty()
+
+    if (points >= 2000) {
+        alert("very good")
+    }
 })
 
 
@@ -154,6 +162,7 @@ $('.button').on('click', (e) => {
 $('#200').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
     const question = gameBoard.twoHundred[index]
+    currentQuestionValue = 200
     $(e.currentTarget).addClass('disabled');
     //fill modal with appropriate question and answers
     $('.modal').toggleClass('is-active')
@@ -171,6 +180,7 @@ $('#200').on('click', '.column', (e) => {
 $('#400').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
     const question = gameBoard.fourHundred[index]
+    currentQuestionValue = 400
     $(e.currentTarget).addClass('disabled');
     $('.modal').toggleClass('is-active')
     $('.modal-card-title').append(`${question.category} for ${question.value}`)
@@ -184,6 +194,7 @@ $('#400').on('click', '.column', (e) => {
 $('#600').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
     const question = gameBoard.sixHundred[index]
+    currentQuestionValue = 600
     $(e.currentTarget).addClass('disabled');
     $('.modal').toggleClass('is-active')
     $('.modal-card-title').append(`${question.category} for ${question.value}`)
@@ -197,6 +208,7 @@ $('#600').on('click', '.column', (e) => {
 $('#800').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
     const question = gameBoard.eightHundred[index]
+    currentQuestionValue = 800
     $(e.currentTarget).addClass('disabled');
     $('.modal').toggleClass('is-active')
     $('.modal-card-title').append(`${question.category} for ${question.value}`)
@@ -210,6 +222,7 @@ $('#800').on('click', '.column', (e) => {
 $('#1000').on('click', '.column', (e) => {
     const index = $(e.currentTarget).data('questionindex')
     const question = gameBoard.oneThousand[index]
+    currentQuestionValue = 1000
     $(e.currentTarget).addClass('disabled');
     $('.modal').toggleClass('is-active')
     $('.modal-card-title').append(`${question.category} for ${question.value}`)
@@ -219,3 +232,9 @@ $('#1000').on('click', '.column', (e) => {
     $('.C').append(`${question.wrong[1]}`)
     $('.D').append(`${question.wrong[2]}`)
 })
+function newPoints(points) {
+    $('.scoreboard').text("Points: " + points)
+}
+
+
+    
