@@ -130,18 +130,23 @@ const gameBoard = {
 //Global points
 let points = 0
 let currentQuestionValue
-
+let skillLevel = "Innocent"
 //Modal instance
 $('.button').on('click', (e) => {
     //POINT SYSTEM
     if ($(e.currentTarget).hasClass('right')) {
         points += currentQuestionValue
         alert("CORRECT")
+        $('html').append('<iframe width="0" height="0" src="https://www.youtube.com/embed/kKfU71APYUA?autoplay=1"></iframe>')
         newPoints(points)
+        newSkill(skillLevel)
     } else {
         alert("WRONG")
         points -= currentQuestionValue
+        $('html').append('<iframe width="0" height="0" src="https://www.youtube.com/embed/EmSmMUIC1no?autoplay=1"></iframe>')
         newPoints(points)
+        newSkill(skillLevel)
+        
     }
     $('.modal').toggleClass('is-active')
     $('.modal-card-title').empty()
@@ -150,10 +155,34 @@ $('.button').on('click', (e) => {
     $('.B').empty()
     $('.C').empty()
     $('.D').empty()
-
+ 
+    //Skill level updater still within Modal instance scope
     if (points >= 2000) {
-        alert("very good")
+        $('.skill').text("Skill Level: " + "Exposed!")
     }
+    if (points >= 3000 && points < 3200) {
+        $('.skill').text("Skill Level: " + "Apprentice!")
+        $('html').append('<iframe width="0" height="0" src="https://www.youtube.com/embed/_Z3ra0CxCE0?autoplay=1"></iframe>')
+    }
+    if (points >= 4000) {
+        $('.skill').text("Skill Level: " + "Practitioner!")
+    }
+    if (points >= 5000) {
+        $('.skill').text("Skill Level: " + "Journeyman!")
+    }
+    if (points >= 7000) {
+        $('.skill').text("Skill Level: " + "Master of WDI Unit 1")
+        $('html').append('<iframe width="0" height="0" src="https://www.youtube.com/embed/vFrNxJoB768?autoplay=1"></iframe>')
+    }
+    if (points >= 8000) {
+        $('.skill').text("Skill Level: " + "Researcher Level!!!")
+    }
+    if (points >= 9000) {
+        $('.skill').text("Skill Level: " + "You're a Web Dev GOD!!!")
+        $('html').append('<iframe width="0" height="0" src="https://www.youtube.com/embed/kAA0txXGigs?autoplay=1"></iframe>')
+    }
+    
+    
 })
 
 
@@ -234,6 +263,9 @@ $('#1000').on('click', '.column', (e) => {
 })
 function newPoints(points) {
     $('.scoreboard').text("Points: " + points)
+}
+function newSkill(skillLevel) {
+    $('.skill').text("Skill Level: " + skillLevel)
 }
 
 
