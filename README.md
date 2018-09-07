@@ -17,23 +17,23 @@ Once player loads the page, they are presented with the gameboard, the challenge
 
 ## Features
 
-  * SweetAlert, an awesome replacement for JavaScript's alert
+  * Modal formatted questions and answers
   * Scoreboard
-  * New Game Button
-  * Reset Score Button
-  * Highlights winning squares
+  * Reset Game Button
+  * Skill level display
+  * Secret audio sounds
+  
 
 
 ## Wireframe
 
-![Wireframe](https://github.com/iamsydsmith/tic-tac-toe/blob/master/img/Tic_Tac_Toe_-_wireframe.png)
-
-## Winning Combination
-
-![Winning Combination](https://github.com/iamsydsmith/tic-tac-toe/blob/gh-pages/img/photo.jpg)
+![Wireframe](https://github.com/cducote/jeopardy/blob/master/storyboard.docx)
 
 ## Future Development
 
 
-  * Make it responsive
-  * Add A.I. (player vs. computer)
+  * Multiplayer capabilities
+  * Unique user names
+  * Randomized question positions.
+  * Style more true to the Jeopardy look
+  
