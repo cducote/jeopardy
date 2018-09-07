@@ -27,7 +27,7 @@ Once player loads the page, they are presented with the gameboard, the challenge
 
 ## Wireframe
 
-![Wireframe](https://github.com/cducote/jeopardy/blob/master/storyboard.docx)
+![Click to download storyboard.doc](https://github.com/cducote/jeopardy/blob/master/storyboard.docx)
 
 ## Future Development
 
