@@ -5,7 +5,7 @@ For project 1, I created a Jeopardy! game with the theme of WDI Unit 1
 
 Once player loads the page, they are presented with the gameboard, the challenge is displayed below, "Test your skills...", the more points the player gathers by answering questions correctly, the higher the skill levl will display, also unlocking and playing various audio sounds.
 
-**Live site:** <>
+**Live site:** <https://blissful-davinci-84bd35.netlify.com/>
 
 ## Technologies Used
 
