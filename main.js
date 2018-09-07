@@ -267,6 +267,8 @@ function newPoints(points) {
 function newSkill(skillLevel) {
     $('.skill').text("Skill Level: " + skillLevel)
 }
-
+$('.reset').click(function() {
+    location.reload();
+});
 
     
